@@ -1,0 +1,15 @@
+name: Sovereign Ascension
+on:
+  push:
+    paths:
+      - 'current_cid.txt'
+jobs:
+  verify-and-broadcast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Validation
+        run: |
+          echo "🌀 APEX-GATE: New Pointer Detected."
+          cat current_cid.txt
